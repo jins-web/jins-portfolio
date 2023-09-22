@@ -1,0 +1,143 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    font-family: 'TTWanjudaedunsancheB';
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+button{
+    background: inherit ;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer;
+    font-family: 'TTWanjudaedunsancheB';
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* font */
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* main */
+#section1 .title {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%,-50px);
+    font-size: 250px;
+    color: #fff;
+    white-space: nowrap;
+}
+#section1 .video {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+#section1 .video video {
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+}
+#header_wrap {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.header_btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    z-index: 2;
+}
+.header_btn a {
+    font-size: 25px;
+    color: #fff;
+}
+.header_btn button {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+}
+.header_btn button:before  {
+    content: "";
+    display: block;
+    height: 1px; width: 100%;
+    background: currentColor;
+    position: absolute;
+    top: 100%; left: 0;
+    will-change: transform;
+    transform: scaleX(0) translateZ(0);
+    transform-origin: 100% 0;
+    transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);;
+}
+.header_btn button:hover:before {
+    transform: scaleX(1) translateZ(0);
+    transform-origin: 0% 0;
+}
+.menu_wrap {
+    height: 900px;
+    margin-top: -127px;
+    transform:translateY(-100%);
+    transition: all 1.1s cubic-bezier(0.430, 0.195, 0.020, 1.000);
+    background: #FF5F38;
+}
+.menu_wrap.menu_open {
+    transform:translateY(0);
+}
+.menu_list {
+    display: flex;
+    justify-content: end;
+    padding-top: 200px;
+    padding-right: 360px;
+}
+.menu_list li a {
+    font-size: 114px;
+    color: #0E0E0E;
+}
