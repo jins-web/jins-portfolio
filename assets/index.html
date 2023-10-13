@@ -5,218 +5,258 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JinWook Profile</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/main.css">
     <style>
-        /* parallax__cont */
-        #parallax__cont {
-            overflow: hidden;
-        }
-        .parallax__item {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #section2, 
-        #section4, 
-        #section6, 
-        #section8 {
-            background-color: #222;
-        }
-        .parallax__item__num {
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            font-size: 5vw;
-            line-height: 1;
-        }
-        .parallax__item__img {
-            width: 10vw;
-            height: 10vw;
-            margin: 1vw;
-            background-color: #fff;
-            background-size: cover;
-            background-position: center;
-        }
-        #section1 .parallax__item__img {
-            background-image: url(assets/img/images14.jpg);
-        }
-        #section2 .parallax__item__img {
-            background-image: url(assets/img/images15.jpg);
-        }
-        #section3 .parallax__item__img {
-            background-image: url(assets/img/images03.jpg);
-        }
-        #section4 .parallax__item__img {
-            background-image: url(assets/img/images04.jpg);
-        }
-        #section5 .parallax__item__img {
-            background-image: url(assets/img/images05.jpg);
-        }
-        #section6 .parallax__item__img {
-            background-image: url(assets/img/images06.jpg);
-        }
-        #section7 .parallax__item__img {
-            background-image: url(assets/img/images07.jpg);
-        }
-        #section8 .parallax__item__img {
-            background-image: url(assets/img/images08.jpg);
-        }
-        #section9 .parallax__item__img {
-            background-image: url(assets/img/images09.jpg);
-        }
-
-        /* option */
-        #section3 .parallax__item__img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50px;
-        }
-        #section5 {
-            flex-direction: column;
-        }
-        #section5 .parallax__item__text,
-        #section6 .parallax__item__text {
-            font-size: 5vw;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        #section7 .parallax__item__text {
-            font-size: 5vw;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #111;
-            padding: 30px;
-            width: 100%;
-            text-align: center;
-        }
-        #section8 {
-            flex-direction: column;
-        }
-        #section8 .parallax__item__text {
-            font-size: 2vw;
-            line-height: 1.5;
-            text-transform: uppercase;
-        }
-        #section8 .parallax__item__img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        #section9 .parallax__item__img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
+        
     </style>
 </head>
 <body>
     <header id="header_wrap">
         <div class="header_btn">
-            <a href="">Jins Protfolio</a>
+            <a href="#">Jins Portfolio</a>
             <button type="button" class="btn_menu">Menu</button>
         </div>
         <div class="menu_wrap">
             <div class="menu_list">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#section4">Contact</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <main id="parallax__cont">
         <section id="section1" class="parallax__item">
-            <span class="parallax__item__num">01</span>
-            <h1 class="title">Jins Portfolio</h1>
-            <div class="video">
-                <video loop muted playsinline preload autoplay>
-                    <source src="./img/video2.mp4" type="video/mp4">
-                </video>
-            </div>
+            <h1 class="title">Continuous growth</h1>
         </section>
         <!-- //section1 -->
 
-        <section id="section2" class="parallax__item">
-            <span class="parallax__item__num">02</span>
-            <div class="parallax__item__img i1"></div>
-            <div class="parallax__item__img i2"></div>
-            <div class="parallax__item__img i3"></div>
+        <section id="section2" class="parallax__item ele_height">
+            <div id="top_sec" class="top_sec">
+                <div class="l_txt">Developers and life afterwards</div>
+            </div>
+            <div class="text_ani">I possess the ability and determination to take on any challenge that arises. With a strong commitment to continuous learning and skill development in the realm of web publishing, I confidently approach every task, knowing that I can adapt and excel in various situations.</div>
         </section>
         <!-- //section2 -->
 
-        <section id="section3" class="parallax__item">
-            <span class="parallax__item__num">03</span>
-            <div class="parallax__item__img"></div>
-            <div class="parallax__item__img"></div>
-            <div class="parallax__item__img"></div>
-            <div class="parallax__item__img"></div>
-            <div class="parallax__item__img"></div>
-            <div class="parallax__item__img"></div>
+        <section id="section3" class="parallax__item ele_height">
+            <div id="top_sec" class="top_sec">
+                <div class="l_txt">My Project</div>
+                <a href="work.html" class="arrow_link">
+                    <span class="icon">↵</span>
+                    <span class="text">See the Work</span>
+                </a>
+            </div>
+            <div class="swiper_wrap">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="type1">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">딜 상품 리뉴얼</div>
+                                </div>
+                                <div class="data">2022년 9월 ~ 2022 12월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type2">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">메인 UI 리뉴얼</div>
+                                </div>
+                                <div class="data">2022 4월 ~ 2022 4월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type3">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">20주년 프로젝트</div>
+                                </div>
+                                <div class="data">2021 9월 ~ 2021 9월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type4">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">B2B 프로젝트</div>
+                                </div>
+                                <div class="data">2021 2월 ~ 2021 4월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type5">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">Mobile 리뉴얼 프로젝트</div>
+                                </div>
+                                <div class="data">2020년 10월 ~ 2020 12월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type6">
+                                <div>
+                                    <div class="company">TenbyTen</div>
+                                    <div class="project_name">프로모션,마케팅 이벤트</div>
+                                </div>
+                                <div class="data">2020년 9월 ~ 2023 1월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type1">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">LG전자 세탁기 관리 시스템 프로젝트 개발</div>
+                                </div>
+                                <div class="data">2020년 7월 ~ 2020년 8월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type2">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">LG전자 모니터 화면검사 자동화 시스템 프로젝트 개발</div>
+                                </div>
+                                <div class="data">2020년 4월 ~ 2020년 6월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type3">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">Btv Plus 모바일 개발</div>
+                                </div>
+                                <div class="data">2020년 3월 ~ 2020년 4월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type4">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">Lg 세탁기연구개발 Platform 개발</div>
+                                </div>
+                                <div class="data">2020년 2월 ~ 2020년 3월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type5">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">LG sw solutions 개발</div>
+                                </div>
+                                <div class="data">2019년 7월 ~ 2019 10월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type6">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">SK hynix EGSS 고도화</div>
+                                </div>
+                                <div class="data">2019년 2월 ~ 2019년 5월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type1">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">LG Thin Client 개발</div>
+                                </div>
+                                <div class="data">2018년 9월 ~ 2018년 10월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type2">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">국립중앙박물관 뮤진 연간운영</div>
+                                </div>
+                                <div class="data">2017년 10월 ~ 2018년 12월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type3">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">Ericsson LG 메시저 개발</div>
+                                </div>
+                                <div class="data">2018년 3월 ~ 2018년 9월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type3">
+                                <div>
+                                    <div class="company">amoeba</div>
+                                    <div class="project_name">new KT.com 리뉴얼</div>
+                                </div>
+                                <div class="data">2017년 2월 ~ 2017년 10월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type1">
+                                <div>
+                                    <div class="company">S2publising</div>
+                                    <div class="project_name">삼성카드 운영</div>
+                                </div>
+                                <div class="data">2013년 6월 ~ 2014년 8월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type2">
+                                <div>
+                                    <div class="company">S2publising</div>
+                                    <div class="project_name">SKT T서비스 모바일 이벤트 페이지 운영</div>
+                                </div>
+                                <div class="data">2013년 5월 ~ 2013년 6월</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="type2">
+                                <div>
+                                    <div class="company">S2publising</div>
+                                    <div class="project_name">메가잉글리쉬/메가HRD 사이트 리뉴얼 프로젝트</div>
+                                </div>
+                                <div class="data">2013년 2월 ~ 2013년 5월</div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
         </section>
         <!-- //section3 -->
 
         <section id="section4" class="parallax__item">
-            <span class="parallax__item__num">04</span>
-            <div class="parallax__item__img"></div>
+            <div id="top_sec" class="top_sec">
+                <div class="l_txt">Developers and life afterwards</div>
+                <div>Get in touch</div>
+            </div>
+            <div class="contact_txt">
+                <div class="img ani_ex01">
+                    <img src="./img/contact.svg" alt="contact me">
+                </div>
+                <div class="email ani_ex01">vhfhflsksk@gmail.com</div>
+            </div>
+            <div class="sub_txt ani_ex01">Looking forward to meeting you</div>
         </section>
         <!-- //section4 -->
-
-        <section id="section5" class="parallax__item">
-            <span class="parallax__item__num">05</span>
-            <div class="parallax__item__text t1">section5</div>
-            <div class="parallax__item__text t2">section5</div>
-            <div class="parallax__item__text t3">section5</div>
-            <div class="parallax__item__text t4">section5</div>
-        </section>
-        <!-- //section5 -->
-
-        <section id="section6" class="parallax__item">
-            <span class="parallax__item__num">06</span>
-            <div class="parallax__item__text">section6</div>
-        </section>
-        <!-- //section6 -->
-
-        <section id="section7" class="parallax__item">
-            <span class="parallax__item__num">07</span>
-            <div class="parallax__item__text t1">코딩이란</div>
-            <div class="parallax__item__text t2">프로그래밍 코드를</div>
-            <div class="parallax__item__text t3">어딘가에</div>
-            <div class="parallax__item__text t4">적는 것을 말한다</div>
-            <div class="parallax__item__text t5">코딩은</div>
-            <div class="parallax__item__text t6">누구나</div>
-            <div class="parallax__item__text t7">할 수 있다.</div>
-        </section>
-        <!-- //section7 -->
-
-        <section id="section8" class="parallax__item">
-            <span class="parallax__item__num">08</span>
-            <div class="parallax__item__text t1">section8 title1</div>
-            <div class="parallax__item__text t2">section8 title2</div>
-            <div class="parallax__item__text t3">section8 title3</div>
-            <div class="parallax__item__img i1"></div>
-        </section>
-        <!-- //section8 -->
-
-        <section id="section9" class="parallax__item">
-            <span class="parallax__item__num">09</span>
-            <div class="parallax__item__img"></div>
-        </section>
-        <!-- //section9 -->
+        
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script src="./js/main.js"></script>
     <script>
         // lenis smooth scroll 설정
@@ -235,9 +275,83 @@
             start: "top top",
             end: "bottom 50%",
             scrub: true,
-            pin: true,
+            pin: false,
             anticipatePin: 1,
-            markers: true
+            markers: false
+        });
+        // const txtani2 = gsap.timeline();
+        // txtani2.from("#section2 .l_txt", {y: -100, autoAlpha:0, duration:1})
+        // ScrollTrigger.create({
+        //     trigger: "#section2 .l_txt",
+        //     start: "top 80%",
+        //     end: "bottom 50%",
+        //     scrub: true,
+        //     pin: false,
+        //     anticipatePin: 1,
+        //     markers: false,
+        //     animation: txtani2
+        // });
+        // const txtani3 = gsap.timeline();
+        // txtani3.from("#section3 .l_txt", {x: -100, autoAlpha:0, duration:1})
+        // ScrollTrigger.create({
+        //     trigger: "#section3 .l_txt",
+        //     start: "top 80%",
+        //     end: "bottom 50%",
+        //     scrub: true,
+        //     pin: false,
+        //     anticipatePin: 1,
+        //     markers: false,
+        //     animation: txtani3
+        // });
+        // const txtani4 = gsap.timeline();
+        // txtani4.from("#section4 .l_txt", {y: 100, autoAlpha:0, duration:1})
+        // ScrollTrigger.create({
+        //     trigger: "#section4 .l_txt",
+        //     start: "top 80%",
+        //     end: "bottom 50%",
+        //     scrub: true,
+        //     pin: false,
+        //     anticipatePin: 1,
+        //     markers: false,
+        //     animation: txtani4
+        // });
+        // split-type text 모션 설정
+        const targets = gsap.utils.toArray(".text_ani");
+        
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, {type: "lines, words, chars"});
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+
+            gsap.from(words, {
+                yPercent: 100,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "circ.out",
+                stagger: {
+                    amount:1.5,
+                    from:"random"
+                },
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top 80%",
+                    end: "+=400",
+                    markers: false,
+                    scrub: 1,
+                }
+            });
+        });
+        // swiper slider 설정
+        const swiper = new Swiper('.swiper', {
+            slidesPerView:"auto",
+            spaceBetween:10,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false
+            },
+            speed: 8000,
         });
     </script>
 </body>

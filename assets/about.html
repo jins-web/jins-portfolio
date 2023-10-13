@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JinWook Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header id="header_wrap">
+        <div class="header_btn sub_header">
+            <a href="index.html">Jins Portfolio</a>
+            <button type="button" class="btn_menu">Menu</button>
+        </div>
+        <div class="menu_wrap sub_menu">
+            <div class="menu_list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="about_wrap" style="background: #FAF8F3;">
+        <section id="about_section01" class="about_head">
+            <div class="grid_01 grid_wrap">
+                <div><img src="./img/about_thum_01.jpg" alt=""></div>
+                <div><img src="./img/about_thum_02.svg" alt="" style="object-fit: none;"></div>
+                <div><img src="./img/about_thum_03.svg" alt=""></div>
+                <div><img src="./img/about_thum_04.svg" alt=""></div>
+            </div>
+            <div class="grid_02 grid_wrap">
+                <div><img src="./img/about_thum_05.svg" alt=""></div>
+                <div><img src="./img/about_thum_06.svg" alt=""></div>
+                <div><img src="./img/about_thum_07.svg" alt=""></div>
+                <div><img src="./img/about_thum_08.svg" alt=""></div>
+            </div>
+            <div class="grid_03 grid_wrap">
+                <div><img src="./img/about_thum_09.svg" alt=""></div>
+                <div><img src="./img/about_thum_10.svg" alt=""></div>
+                <div><img src="./img/about_thum_11.svg" alt=""></div>
+                <div><img src="./img/about_thum_12.svg" alt=""></div>
+            </div>
+            <div class="grid_04 grid_wrap">
+                <div><img src="./img/about_thum_13.svg" alt=""></div>
+                <div><img src="./img/about_thum_14.svg" alt=""></div>
+                <div><img src="./img/about_thum_15.svg" alt=""></div>
+                <div><img src="./img/about_thum_16.svg" alt=""></div>
+            </div>
+        </section>
+        <section id="about_section02" class="about_contents ele_height">
+            <h1>Web Developer</h1>
+            <div class="text">그저 단순히 일하는 것이 아닌 무엇이 더 사용자의 경험에 좋은지 고민하고 더 깊은 전문성을 위해 노력하는 개발자 김진욱입니다.
+                웹 에이전시를 다니며 PC, Mobile 등 다양한 프로젝트에서 웹 표준 및 크로스 브라우징 등을 경험하였고 commerce 회사의 자사 플랫폼 운영을 경험하면서 새로운 기술에 대한 이해뿐만 아니라 어떻게 활용할지 고민하였고 이를 통해 질문을 두려워하지 않으며 팀원들과의 공통적인 발전을 위해 노력했습니다.</div>
+            <h1>SKills</h1>
+            <ul class="skill_list">
+                <li>
+                    <img src="./img/HTML5_Badge.svg" alt="html5">
+                </li>
+                <li>
+                    <img src="./img/CSS3_logo.svg" alt="css3">
+                </li>
+                <li>
+                    <img src="./img/javascript.svg" alt="javascript">
+                </li>
+                <li>
+                    <img src="./img/Vue.js_Logo.svg" alt="vue.js">
+                </li>
+            </ul>
+        </section>
+        <section id="section4" class="parallax__item contact_section">
+            <div id="top_sec" class="top_sec">
+                <div class="l_txt">Developers and life afterwards</div>
+                <div>Get in touch</div>
+            </div>
+            <div class="contact_txt">
+                <div class="img ani_ex01">
+                    <img src="./img/contact.svg" alt="contact me">
+                </div>
+                <div class="email ani_ex01">vhfhflsksk@gmail.com</div>
+            </div>
+            <div class="sub_txt ani_ex01">Looking forward to meeting you</div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        // lenis smooth scroll 설정
+        const lenis = new Lenis()
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+        // gsap 설정
+        // split-type text 모션 설정
+        const targets = gsap.utils.toArray(".about_contents .text");
+        
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, {type: "lines, words, chars"});
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+
+            gsap.from(lines, {
+                yPercent: 100,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "cubic-bezier(0.215, 0.610, 0.355, 1.000)",
+                stagger: {
+                    amount:1.5,
+                    from:"lines"
+                },
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top 80%",
+                    end: "+=400",
+                    markers: false,
+                    scrub: false,
+                }
+            });
+        });
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".grid_01,.grid_03").forEach((item) => {
+            gsap.fromTo(item, {
+                y: 0,
+                x:-110,
+                autoAlpha:0,
+            },
+            {
+                y: -120,
+                x:0,
+                autoAlpha:1,
+                duration:1,
+                ease: "cubic-bezier(0.215, 0.610, 0.355, 1.000)",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                    end: "top 20%",
+                    markers: false,
+                    scrub: false,
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+        gsap.utils.toArray(".grid_02,.grid_04").forEach((item) => {
+            gsap.fromTo(item, {
+                y: -120,
+                autoAlpha:0,
+            },
+            {
+                y: 0,
+                autoAlpha:1,
+                duration:1,
+                ease: "cubic-bezier(0.215, 0.610, 0.355, 1.000)",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                    end: "top 20%",
+                    markers: false,
+                    scrub: false,
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
