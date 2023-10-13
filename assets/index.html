@@ -268,14 +268,14 @@
         requestAnimationFrame(raf)
         // gsap 설정
         const txtani1 = gsap.timeline();
-        txtani1.from("#section1 .title", {y: -100, autoAlpha:0})
+        txtani1.from("#section1 .title", {y: -100, autoAlpha:0.3})
         ScrollTrigger.create({
             animation: txtani1,
             trigger: "#section1",
             start: "top top",
-            end: "bottom 50%",
+            end: "bottom 30%",
             scrub: true,
-            pin: false,
+            pin: true,
             anticipatePin: 1,
             markers: false
         });
