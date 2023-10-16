@@ -767,49 +767,54 @@ table {
 }
 /* mobile */
 @media only screen and (max-width: 767px) {
+   :root {
+      --unit-fx: calc( var(--vw) / 375 );
+      --unit-fy: calc( var(--vh) / 726 );
+   }
+   main {
+      overflow: hidden;
+   }
    .header_btn {
-      height: calc( 200 * var(--unit-fx));
+      height: calc( 70 * var(--unit-fx));
+      padding: calc( 10 * var(--unit-fx)) calc( 30 * var(--unit-fx));
       align-items: center;
    }
    .header_btn a {
-      font-size: calc( 70 * var(--unit-fx));
+      font-size: calc( 25 * var(--unit-fx));
    }
    .header_btn button {
-      font-size: calc( 70 * var(--unit-fx));
+      font-size: calc( 25 * var(--unit-fx));
    }
    #section2 .text_ani {
-      font-size: calc( 80 * var(--unit-fx));
+      font-size: calc( 25 * var(--unit-fx));
       line-height: 1.5;
    }
    .header_btn.on {
-      height: calc( 200 * var(--unit-fx));
-   }
-   .menu_wrap.sub_menu {
-      transform: translateY(-200%);
+      height: calc( 70 * var(--unit-fx));
    }
    #section3 .type1 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 1004 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .type2 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 508 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .type3 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 520 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .type4 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 580 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .type5 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 1004 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .type6 {
-      width: calc( 932 * var(--unit-fx));
-      height: calc( 508 * var(--unit-fx));
+      width: auto;
+      height: calc( 300 * var(--unit-fx));
    }
    #section3 .swiper_wrap {
       position:absolute;
@@ -818,12 +823,155 @@ table {
       transform: translate(0,-50%);
    }
    #section3 .company {
-      font-size: calc( 50 * var(--unit-fx));
+      font-size: calc( 30 * var(--unit-fx));
    }
    #section3 .project_name {
-      font-size: calc( 32 * var(--unit-fx));
+      font-size: calc( 25 * var(--unit-fx));
    }
    #section3 .data {
       font-size: calc( 24 * var(--unit-fx));
+   }
+   .s_head .title {
+      font-size: calc( 25 * var(--unit-fx));
+   }
+   .s_head h1 {
+      font-size: calc( 25 * var(--unit-fx));
+   }
+   .s_head .text {
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   .s_head .bar {
+      margin-top: calc( 30 * var(--unit-fx));
+   }
+   .s_head .skill {
+      padding: calc( 25 * var(--unit-fx)) 0;
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   .s_contents .img_box {
+      padding-top: calc( 50 * var(--unit-fx));
+   }
+   .s_contents .img_box > div {
+      padding-bottom: calc( 50 * var(--unit-fx));
+   }
+   .s_contents .img_box .half {
+      width:100%;
+      transform: scale(3);
+      margin-top: calc( 290 * var(--unit-fx));
+      padding-bottom: calc( 115 * var(--unit-fx));
+   }
+   .s_contents .img_box img {
+      width: 100%;
+   }
+   .menu_list {
+      height: 100vh;
+      padding: calc( 200 * var(--unit-fx)) calc( 20 * var(--unit-fx)) 0;
+      justify-content: start;
+   }
+   .menu_list li a {
+      font-size: calc( 40 * var(--unit-fx));
+   }
+   #section1 .title {
+      font-size: calc( 40 * var(--unit-fx));
+   }
+   #section2,
+   #section3,
+   #section4 {
+      padding: calc( 20 * var(--unit-fx)) calc( 15 * var(--unit-fx)) 0;
+   }
+   .top_sec {
+      padding-bottom: calc( 20 * var(--unit-fx));
+      font-size: calc( 10 * var(--unit-fx));
+   }
+   .top_sec .l_txt {
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   .arrow_link .text {
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   .arrow_link .icon {
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   #section4 .img {
+      width: calc( 150 * var(--unit-fx));
+   }
+   #section4 .email {
+      font-size: calc( 30 * var(--unit-fx));
+   }
+   #section4 .sub_txt {
+      font-size: calc( 60 * var(--unit-fx));
+   }
+   .w_head {
+      padding: calc( 100 * var(--unit-fx)) calc( 15 * var(--unit-fx)) 0
+   }
+   .w_head h1 {
+      font-size: calc( 30 * var(--unit-fx));
+   }
+   .w_contents {
+      padding: calc( 20 * var(--unit-fx)) calc( 15 * var(--unit-fx));
+   }
+   .w_contents nav {
+      margin-bottom: calc( 30 * var(--unit-fx));
+   }
+   .w_contents .f_left,
+   .w_contents .f_right {
+      width: 49%;
+   }
+   .w_list a {
+      display: block;
+      margin-bottom: calc( 30 * var(--unit-fx));
+   }
+   .w_contents .f_left .contents {
+      height: calc( 150 * var(--unit-fx));
+   }
+   .w_list .contents {
+      width: 100%;
+      height: inherit;  
+   }
+   .w_list .contents_info .number {
+      min-width: 4em;
+   }
+   .w_contents .f_left .w_list .contents {
+      height: calc( 170 * var(--unit-fx));
+   }
+   .w_list .contents.second {
+      height: calc( 200 * var(--unit-fx));
+   }
+   .w_list .contents img {
+      object-fit: contain;
+   }
+   .w_list .contents.third {
+      width: 100%;
+      height: calc( 200 * var(--unit-fx));
+   }
+   .w_list .list.wide {
+      width: 100%;
+      height: calc( 200 * var(--unit-fx));
+      margin-bottom: calc( 40 * var(--unit-fx));
+   }
+   .w_list .list.wide .contents {
+      height: calc( 200 * var(--unit-fx));
+   }
+   .s_head {
+      padding: calc( 100 * var(--unit-fx)) calc( 15 * var(--unit-fx)) 0
+   }
+   .about_head {
+      padding: 0 calc( 15 * var(--unit-fx))
+   }
+   .about_contents {
+      margin-top: calc( 50 * var(--unit-fx));
+      padding: 0 calc( 15 * var(--unit-fx));
+   }
+   .about_contents h1 {
+      font-size: calc( 35 * var(--unit-fx));
+   }
+   .about_contents .text {
+      font-size: calc( 20 * var(--unit-fx));
+   }
+   .about_contents .skill_list li {
+      width: calc( 70 * var(--unit-fx));
+      height: calc( 70 * var(--unit-fx));
+   }
+   .contact_section {
+      margin-top: calc( 30 * var(--unit-fx));
    }
 }
