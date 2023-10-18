@@ -19,7 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     text-decoration: none;
-    font-family: 'globalfont','Pretendard-Regular';
+    /* font-family: 'globalfont','Pretendard-Regular'; */
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -33,7 +33,7 @@ button{
     padding:0;
     overflow:visible;
     cursor:pointer;
-    font-family: 'globalfont','Pretendard-Regular';
+    /* font-family: 'globalfont','Pretendard-Regular'; */
 }
 body {
 	line-height: 1;

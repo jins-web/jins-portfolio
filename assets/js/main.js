@@ -36,7 +36,8 @@ top_position.forEach((item) => {
 })
 // gsap
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray(".ani_ex01").forEach((item) => {
+const anitext01 = gsap.utils.toArray(".ani_ex01");
+anitext01.forEach((item) => {
     gsap.from(item, {
         y: -120,
         autoAlpha:0,
