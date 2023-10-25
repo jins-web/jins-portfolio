@@ -288,16 +288,16 @@
         }
         requestAnimationFrame(raf)
         // gsap 설정
-        // const tween = gsap.to("#section1 .title", {
-        //     backgroundImage:
-        //     "linear-gradient(90deg, #111 0%, #111 100%, #fff 100%)",
-        //     duration: 1,
-        //     ease: "power1",
-        //     stagger: {
-        //         each: 0.1,
-        //         ease: "power2.out"
-        //     }
-        // });
+        const tween = gsap.to("#section1 .title", {
+            backgroundImage:
+            "linear-gradient(90deg, #111 0%, #111 100%, #fff 100%)",
+            duration: 1,
+            ease: "power1",
+            stagger: {
+                each: 0.1,
+                ease: "power2.out"
+            }
+        });
         // const pulses = gsap
         // .timeline({
         //         defaults: {
