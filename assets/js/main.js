@@ -34,8 +34,7 @@ top_position.forEach((item) => {
         }
     })
 })
-import { DrawSVGPlugin } from "gsap-trial/DrawSVGPlugin";
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin,DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
 
 const leftText = gsap.utils.toArray(".l_txt");
 leftText.forEach((item)=> { 
