@@ -34,7 +34,7 @@ top_position.forEach((item) => {
         }
     })
 })
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin,DrawSVGPlugin,GSDevTools);
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin,DrawSVGPlugin);
 
 const leftText = gsap.utils.toArray(".l_txt");
 leftText.forEach((item)=> { 
