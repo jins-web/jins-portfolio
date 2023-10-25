@@ -34,46 +34,35 @@ top_position.forEach((item) => {
         }
     })
 })
-// gsap
-gsap.registerPlugin(ScrollTrigger);
-const anitext01 = gsap.utils.toArray(".ani_ex01");
-anitext01.forEach((item) => {
-    gsap.from(item, {
-        y: -120,
-        autoAlpha:0,
-        duration:1,
-        ease: "elastic",
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin,DrawSVGPlugin,GSDevTools);
+
+const leftText = gsap.utils.toArray(".l_txt");
+leftText.forEach((item)=> { 
+    gsap.from(item,{
+        x: -500,
+        ease:"back",
+        duration:1.5,
+        opacity:0,
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            end: "bottom 20%",
-            markers: false,
-            scrub: false,
-            toggleActions: "play none none reset"
-        }
-    });
-});
-gsap.utils.toArray(".l_txt").forEach((items) => {
-    gsap.from(items, {
-        y: -100, 
-        autoAlpha:0, 
-        duration:1,
-        ScrollTrigger: {
-            trigger: items,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: false,
-            markers: false,
-            toggleActions: "play none none reset"
+            markers :false,
+            toggleActions:"play none none reset"
         }
     })
 });
-
-
-
-
-
-
-
-
-
+const dropText = gsap.utils.toArray(".ani_ex01");
+dropText.forEach((items)=> {
+    gsap.from(items,{
+        y: -150,
+        ease:"back",
+        duration:1,
+        opacity:0,
+        scrollTrigger: {
+            trigger:items,
+            start:"top 60%",
+            markers :false,
+            toggleActions:"play none none reset"
+        }
+    })
+});

@@ -30,8 +30,29 @@
         </div>
     </header>
     <main id="parallax__cont">
-        <section id="section1" class="parallax__item">
+        <section id="section1" class="">
             <h1 class="title">Continuous growth</h1>
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200">
+                <path class="line01 line" d="M 10 200  600 200"></path>
+                <path class="line02 line" d="M 10 400  600 400"></path>
+                <path class="line03 line" d="M 10 600  600 600"></path>
+                <path class="line04 line" d="M 10 800  600 800"></path>
+                <path class="line05 line" d="M 10 1000  600 1000"></path>
+                <text class="text01 txt_year" x="70" y="190">2013 S2publising</text>
+                <text class="text02 txt_year" x="70" y="390">2017 amoeba</text>
+                <text class="text03 txt_year" x="70" y="590">2020 TenbyTen</text>
+              
+                <path class="theLine" d="M -5,0
+                         Q 450 230 300 450 
+                         T 130 750
+                         Q 100 850 300 1000
+                         T 150 1200" fill="none" stroke="white" stroke-width="10px" />
+              
+                <circle class="ball ball01" r="20" cx="50" cy="100"></circle>
+                <circle class="ball ball02" r="20" cx="278" cy="201"></circle>
+                <circle class="ball ball03" r="20" cx="327" cy="401"></circle>
+                <circle class="ball ball04" r="20" cx="203" cy="601"></circle>
+            </svg>
         </section>
         <!-- //section1 -->
 
@@ -248,9 +269,12 @@
         
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script> 
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+    <script src="https://assets.codepen.io/16327/GSDevTools3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="./js/main.js"></script>
@@ -263,33 +287,56 @@
         }
         requestAnimationFrame(raf)
         // gsap 설정
-        const txtani1 = gsap.timeline();
-        txtani1.from("#section1 .title", {y: -100, autoAlpha:0.3})
-        ScrollTrigger.create({
-            animation: txtani1,
-            trigger: "#section1",
-            start: "top top",
-            end: "bottom 30%",
-            scrub: true,
-            pin: true,
-            anticipatePin: 1,
-            markers: false
+        const tween = gsap.to("#section1 .title", {
+            backgroundImage:
+            "linear-gradient(90deg, #111 0%, #111 100%, #fff 100%)",
+            duration: 1,
+            ease: "power1",
+            stagger: {
+                each: 0.1,
+                ease: "power2.out"
+            }
         });
-        // const txtani2 = gsap.timeline();
-        // txtani2.from("#section2 .l_txt", {y: -100, autoAlpha:0, duration:1})
-        // ScrollTrigger.create({
-        //     trigger: "#section2 .l_txt",
-        //     start: "top 80%",
-        //     end: "bottom 50%",
-        //     scrub: true,
-        //     pin: false,
-        //     anticipatePin: 1,
-        //     markers: false,
-        //     animation: txtani2
-        // });
+        const pulses = gsap
+        .timeline({
+                defaults: {
+                scale: 2,
+                autoAlpha: 0.5,
+                transformOrigin: "center",
+                ease: "elastic(2.5, 1)"
+                }
+        })
+        .to(".ball02, .text01", {}, 0.45)
+        .to(".ball03, .text02", {}, 0.75)
+        .to(".ball04, .text03", {}, 1.12);
+
+        const main = gsap
+        .timeline({
+            scrollTrigger: {
+            trigger: "#svg",
+            scrub: true,
+            start: "20% 20%",
+            end: "bottom 30%",
+            }
+        })
+        .to(".ball01", { autoAlpha: 1, duration: 0.05 })
+        .from(".theLine", { drawSVG: 0, duration: 4 }, 0)
+        .to(
+            ".ball01",
+            {
+            motionPath: {
+                path: ".theLine",
+                align: ".theLine",
+                alignOrigin: [0.5, 0.5]
+            },
+            duration: 4
+            },
+            0
+        )
+        .add(pulses, 0);
+        //GSDevTools.create({animation:main})
         // split-type text 모션 설정
         const targets = gsap.utils.toArray(".text_ani");
-        
         targets.forEach(target => {
             let SplitClient = new SplitType(target, {type: "lines, words, chars"});
             let lines = SplitClient.lines;
